@@ -18,20 +18,30 @@ Test Tokens Faucets -
 https://faucet.goerli.mudit.blog/
 https://faucet.matic.network/
 
-Token Name
-Bridge
-Parent Chain Address: Goerli
-Child Chain: MUMBAI
-DummyERC20Token
-PoS
-0x655F2166b0709cd575202630952D71E2bB0d61Af
-0xfe4F5145f6e09952a5ba9e956ED0C25e3Fa4c7F1
-DummyERC1155Token
-PoS
-0x2e3Ef7931F2d0e4a7da3dea950FF3F19269d9063
-0xA07e45A987F19E25176c877d98388878622623FA
-
-
+<table class="table">
+  <thead>
+    <tr>
+      <th>Token Name</th>
+      <th>Bridge</th>
+      <th>Parent Chain Address: Goerli</th>
+      <th>Child Chain: MUMBAI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DummyERC20Token</td>
+      <td>PoS</td>
+      <td>0x655F2166b0709cd575202630952D71E2bB0d61Af</td>
+      <td>0xfe4F5145f6e09952a5ba9e956ED0C25e3Fa4c7F1</td>
+    </tr>
+    <tr>
+      <td>DummyERC1155Token</td>
+      <td>PoS</td>
+      <td>0x2e3Ef7931F2d0e4a7da3dea950FF3F19269d9063</td>
+      <td>0xA07e45A987F19E25176c877d98388878622623FA</td>
+    </tr>
+  </tbody>
+</table>
 
 
 Create Project-
@@ -58,4 +68,3 @@ https://docs.polygon.technology/docs/develop/network-details/mapped-tokens/
 
 https://mumbai.polygonscan.com/address/0x4c10ee522d5a3b50e9f065d937bd8c1458e2f084
 https://goerli.etherscan.io/token/0x4c10ee522d5a3b50e9f065d937bd8c1458e2f084
-
