@@ -1,0 +1,16 @@
+{
+  "name": "newfolder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shohag",
+  "license": "MIT",
+  "dependencies": {
+    "@maticnetwork/maticjs": "^2.0.44",
+    "@truffle/hdwallet-provider": "^1.4.1",
+    "web3": "^1.4.0"
+  }
+}
