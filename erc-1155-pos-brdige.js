@@ -6,6 +6,7 @@ const secrets = require("./secrets.json")
 let user = "0x7D93107852454857C511b0c1E590b59B4cE34758"
 //let rootToken = "0x11C47A4F19cc52923b9C495080ADB441ADe38883" // Goerli Contract Address
 let rootToken = "0xe212dFfB1A42c5380d05072Ae050896cF69eaB4f" // Goerli Contract Address
+let childToken = "0x4cd9d903f91c843b5004fe82d72d67713294966e" // Mumbai Contract Address
 
 let amount = 10 // amount of token we want to trasnfer
 let tokenId = 0 // Token ID
