@@ -8,8 +8,8 @@ let user = "0x7D93107852454857C511b0c1E590b59B4cE34758"
 let rootToken = "0xe212dFfB1A42c5380d05072Ae050896cF69eaB4f" // Goerli Contract Address
 let childToken = "0x4cd9d903f91c843b5004fe82d72d67713294966e" // Mumbai Contract Address
 
-let amount = 10 // amount of token we want to trasnfer
-let tokenId = 0 // Token ID
+let amount = 1 // amount of token we want to trasnfer
+let tokenId = 1 // Token ID
 let data = "" // Additional data
 
 const parentProvider = new HDWalletProvider(secrets.seed, secrets.goerli) // Goerli TestNET JSONRPC URL
@@ -22,10 +22,13 @@ const maticPOSClient = new MaticPOSClient({
 	maticProvider
 });
 
+
+
 (async () =>
 {
 	try
 	{
+		console.log("Start...")
 		let result = await maticPOSClient.approveERC1155ForDeposit(rootToken, {
 			from: user, gasPrice: "10000000000"
 		});
@@ -33,16 +36,17 @@ const maticPOSClient = new MaticPOSClient({
 
 		let result_2 = await maticPOSClient.depositSingleERC1155ForUser(
 			rootToken,
-			user,
+			"0x94ace6CC3A7bb25aceab19AC7Dc2cfC69B2170c4",
 			tokenId.toString(),
 			amount,
 			data,
 			{ from: user, gasPrice: "10000000000" }
 		);
 		console.log(result_2);
+		console.log("Completed!")
 	}
 	catch (error)
 	{
 		console.log(error)
 	}
-})()
+})();
