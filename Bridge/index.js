@@ -14,7 +14,7 @@ use(Web3ClientPlugin);
 var fromAddress="0x94ace6CC3A7bb25aceab19AC7Dc2cfC69B2170c4";
 var privateKey="67d50a1966cbb478b2e2da3d0e3a118e66e91814c9f56696493287faf3f4efdb";
 var reciverAddress="0x94ace6CC3A7bb25aceab19AC7Dc2cfC69B2170c4";
-var tokenId=11;
+var tokenId=13;
 
 var mainRPC ="https://goerli.infura.io/v3/989463cceccb4c17b44b5b5a6068cf2a";
 var childRPC="https://rpc-mumbai.maticvigil.com/v1/972750472dea9a17a28b1d867ac86c61e8b29569";
@@ -26,15 +26,15 @@ const executeDepositGoerliToMumbaiTestNet = async () => {
         version: 'mumbai',
         parent: {
         provider: new HDWalletProvider(privateKey, mainRPC),
-        defaultConfig: {
-            from : fromAddress
-        }
+            defaultConfig: {
+                from : fromAddress
+            }
         },
         child: {
         provider: new HDWalletProvider(privateKey, childRPC),
-        defaultConfig: {
-            from : fromAddress
-        }
+            defaultConfig: {
+                from : fromAddress
+            }
         }
     });
     const parentTokenAddress="0x7e5DEbc5d95FFB65b7d389D8c35109463d76927a";
@@ -53,7 +53,6 @@ const executeDepositGoerliToMumbaiTestNet = async () => {
     console.log(txHashDeposit);
     const txReceiptDeposit = await result.getReceipt();
     console.log(txReceiptDeposit);
-
 }
 
 executeDepositGoerliToMumbaiTestNet().then(_ => {

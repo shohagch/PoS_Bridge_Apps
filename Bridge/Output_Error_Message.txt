@@ -1,0 +1,66 @@
+PS D:\BlockchainDevelopments\Bridge\PoS_Bridge_Apps\Bridge> node withdraw.js
+0xf0c0d8eafd1b92c72b49441e3a9eb187cca886386fd47485bc84f4f84be51035
+{
+  blockHash: '0x40a6eec9bf21d6b623aac74378ea119e58f6d2ffd3cfbed68c56393a5b267b2d',
+  blockNumber: 26428859,
+  contractAddress: null,
+  cumulativeGasUsed: 13786558,
+  from: '0x94ace6cc3a7bb25aceab19ac7dc2cfc69b2170c4',
+  gasUsed: 56511,
+  status: true,
+  to: '0x75d008a9a50a961c47e110d8a5b3c42247eec9e6',
+  transactionHash: '0xf0c0d8eafd1b92c72b49441e3a9eb187cca886386fd47485bc84f4f84be51035',
+  transactionIndex: 64,
+  events: {
+    '0': {
+      address: '0x0000000000000000000000000000000000001010',
+      blockNumber: 26428859,
+      transactionHash: '0xf0c0d8eafd1b92c72b49441e3a9eb187cca886386fd47485bc84f4f84be51035',
+      transactionIndex: 64,
+      blockHash: '0x40a6eec9bf21d6b623aac74378ea119e58f6d2ffd3cfbed68c56393a5b267b2d',
+      logIndex: 232,
+      removed: false,
+      id: 'log_b0be6965',
+      returnValues: Result {},
+      event: undefined,
+      signature: null,
+      raw: [Object]
+    },
+    Approval: {
+      address: '0x75D008A9A50a961C47e110D8A5B3C42247EeC9e6',
+      blockNumber: 26428859,
+      transactionHash: '0xf0c0d8eafd1b92c72b49441e3a9eb187cca886386fd47485bc84f4f84be51035',
+      transactionIndex: 64,
+      blockHash: '0x40a6eec9bf21d6b623aac74378ea119e58f6d2ffd3cfbed68c56393a5b267b2d',
+      logIndex: 230,
+      removed: false,
+      id: 'log_f274c9bf',
+      returnValues: [Result],
+      event: 'Approval',
+      signature: '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925',
+      raw: [Object]
+    },
+    Transfer: {
+      address: '0x75D008A9A50a961C47e110D8A5B3C42247EeC9e6',
+      blockNumber: 26428859,
+      transactionHash: '0xf0c0d8eafd1b92c72b49441e3a9eb187cca886386fd47485bc84f4f84be51035',
+      transactionIndex: 64,
+      blockHash: '0x40a6eec9bf21d6b623aac74378ea119e58f6d2ffd3cfbed68c56393a5b267b2d',
+      logIndex: 231,
+      removed: false,
+      id: 'log_67b56f50',
+      returnValues: [Result],
+      event: 'Transfer',
+      raw: [Object]
+    }
+  },
+  logs: undefined,
+  logsBloom: '0x00000000000000000000004000000000000000000000000000000010004000000000000004000020000000000000000000008000000000000000000000200000000000000000000000000008000000800000000000000000000300000000000000000000020000080000000000000800000000000000000080000010000000000000000000000000000000000000000000000100000000000000000000000000220000000000000000000000000000000000000000000000000000000000004000000002000000000001000000000000002000000000000000120000001020000010000000000000000000000000000000000000000000040000000000100000', 
+  root: undefined,
+  type: '0x0'
+}
+1st Section Done
+error Error: Burn transaction has not been checkpointed as yet
+    at D:\BlockchainDevelopments\Bridge\PoS_Bridge_Apps\Bridge\node_modules\@maticnetwork\maticjs\dist\matic.node.js:1850:23
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async executeWithdrawMumbaiToGoerliTestNet (D:\BlockchainDevelopments\Bridge\PoS_Bridge_Apps\Bridge\withdraw.js:58:32)
