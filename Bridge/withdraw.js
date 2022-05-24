@@ -13,8 +13,8 @@ use(Web3ClientPlugin);
 var mainRPC ="https://goerli.infura.io/v3/989463cceccb4c17b44b5b5a6068cf2a";
 var childRPC="https://rpc-mumbai.maticvigil.com/v1/972750472dea9a17a28b1d867ac86c61e8b29569";
 
-var fromAddress="0x7d93107852454857c511b0c1e590b59b4ce34758";
-var privateKey="ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80";
+var fromAddress="0x94ace6CC3A7bb25aceab19AC7Dc2cfC69B2170c4";
+var privateKey="67d50a1966cbb478b2e2da3d0e3a118e66e91814c9f56696493287faf3f4efdb";
 var tokenId=11;
 
 const executeWithdrawMumbaiToGoerliTestNet = async () => {
@@ -52,18 +52,20 @@ const executeWithdrawMumbaiToGoerliTestNet = async () => {
     // console.log(txHashWithdraw);
     // const txReceiptWithdraw = await resultWithdraw.getReceipt();
     // console.log(txReceiptWithdraw);   
-
     // console.log("1st Section Done")
 
-    const resultWithdrawExit = await parentERC721Token.withdrawExit("0xabb115bfa2f14114d33f2888731450fcbe1dda4f3256fc023e8a649b17876667");
-    console.log("Result Withdraw Exit...")
+    const isCheckPointed = await posClient.isCheckPointed("0x344519ef59194f4f7f152c0be8d0dc4275f2626cf052e51a2bd0afd06687b54c");
+    console.log(isCheckPointed);
 
-    const txHashWithdrawExit = await resultWithdrawExit.getTransactionHash();
-    console.log(txHashWithdrawExit);
-    const txReceiptWithdrawExit = await resultWithdrawExit.getReceipt();
-    console.log(txReceiptWithdrawExit);
- 
+    // const resultWithdrawExit = await parentERC721Token.withdrawExit("0x344519ef59194f4f7f152c0be8d0dc4275f2626cf052e51a2bd0afd06687b54c");
+    // console.log("Result Withdraw Exit...")
+
+    // const txHashWithdrawExit = await resultWithdrawExit.getTransactionHash();
+    // console.log(txHashWithdrawExit);
+    // const txReceiptWithdrawExit = await resultWithdrawExit.getReceipt();
+    // console.log(txReceiptWithdrawExit);
 }
+
 executeWithdrawMumbaiToGoerliTestNet().then(_ => {
     process.exit(0)
 }).catch(err => {
