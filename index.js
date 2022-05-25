@@ -6,7 +6,7 @@ async function approveandtransfer() {
     
     const privateKey = 'd043b90f5073f4f3768a86a51fee6ddd1a1df7b395712421b2c66da0834b574a';
     const from = "0x7D93107852454857C511b0c1E590b59B4cE34758";
-    const rootToken = "0x655F2166b0709cd575202630952D71E2bB0d61Af"; // this is taken from matic docs and discussed below
+    const rootToken = "0xb6c5c98337ddc9906cd80fc7b69045f3e93004e5"; // this is taken from matic docs and discussed below
     //const rootToken="0x4C10Ee522d5a3b50E9f065d937bD8c1458E2f084";  //xBDT
 
     // the following RPC urls will change for mainnet.
@@ -40,12 +40,10 @@ async function approveandtransfer() {
     console.log(" Log Checking ");
 
     console.log("approve completed and transfer initiated");
-
     await maticPOSClient.depositERC20ForUser(rootToken, from, amount, {
         from: from,
         gasPrice: "10000000000",
     });
-
     console.log("transfer complete");
 }
 
