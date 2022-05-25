@@ -57,13 +57,13 @@ const executeWithdrawMumbaiToGoerliTestNet = async () => {
     const isCheckPointed = await posClient.isCheckPointed("0x344519ef59194f4f7f152c0be8d0dc4275f2626cf052e51a2bd0afd06687b54c");
     console.log(isCheckPointed);
 
-    // const resultWithdrawExit = await parentERC721Token.withdrawExit("0x344519ef59194f4f7f152c0be8d0dc4275f2626cf052e51a2bd0afd06687b54c");
-    // console.log("Result Withdraw Exit...")
+    const resultWithdrawExit = await parentERC721Token.withdrawExit("0x344519ef59194f4f7f152c0be8d0dc4275f2626cf052e51a2bd0afd06687b54c");
+    console.log("Result Withdraw Exit...")
 
-    // const txHashWithdrawExit = await resultWithdrawExit.getTransactionHash();
-    // console.log(txHashWithdrawExit);
-    // const txReceiptWithdrawExit = await resultWithdrawExit.getReceipt();
-    // console.log(txReceiptWithdrawExit);
+    const txHashWithdrawExit = await resultWithdrawExit.getTransactionHash();
+    console.log(txHashWithdrawExit);
+    const txReceiptWithdrawExit = await resultWithdrawExit.getReceipt();
+    console.log(txReceiptWithdrawExit);
 }
 
 executeWithdrawMumbaiToGoerliTestNet().then(_ => {
