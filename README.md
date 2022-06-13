@@ -17,6 +17,7 @@ Test Tokens Faucets -
 https://faucet.goerli.mudit.blog/
 https://faucet.matic.network/
 
+Token Mapping Link- https://docs.polygon.technology/docs/develop/network-details/mapped-tokens/
 <table class="table">
   <thead>
     <tr>
